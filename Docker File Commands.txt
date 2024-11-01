@@ -1,0 +1,96 @@
+    1  yum install docker
+    2  clear
+    3  docker --version
+    4  docker login
+    5  docker search nginx
+    6  chmod 666 /var/run/docker.sock
+    7  sudo chmod 666 /var/run/docker.sock
+    8  clear
+    9  systemctl status docker
+   10  systemctl start docker
+   11  systemctl status docker
+   12  clear
+   13  docker search nginx
+   14  docker search ubuntu
+   15  clear
+   16  docker images
+   17  docker pull nginx
+   18  docker images
+   19  docker pull ubuntu
+   20  docker images
+   21  clear
+   22  docker images
+   23  docker image ls
+   24  docker inspect image nginx
+   25  docker inspect image ubuntu
+   26  clear
+   27  docker image ls
+   28  docker create nginx
+   29  docker ps
+   30  docker ps -a
+   31  docker start 7d167ed20bc4
+   32  docker ps -a
+   33  docker stop 7d167ed20bc4
+   34  docker ps -a
+   35  cleae
+   36  clear
+   37  docker images
+   38  docker ps -a
+   39  docker create --name nginx_custom nginx
+   40  docker ps -a
+   41  docker start  nginx_custom
+   42  docker ps -a
+   43  docker stop d5a8a34daede
+   44  docker ps -a
+   45  docker run -d --name nginx_custom1 nginx
+   46  clear
+   47  docker ps -a
+   48  docker stop nginx_custom1
+   49  docker ps -a
+   50  docker run  --name nginx_custom2 nginx
+   51  clear
+   52  docker ps -a
+   53  docker run -d --name nginx_custom3 nginx
+   54  docker ps -a
+   55  docker stop f07d1f63095
+   56  docker stop 5f07d1f63095
+   57  docker ps -a
+   58  clear
+   59  docker ps -a
+   60  docker kill  nginx_custom3
+   61  docker kill  nginx_custom2
+   62  docker start  nginx_custom3
+   63  docker ps -a
+   64  docker kill  nginx_custom3
+   65  docker ps -a
+   66  cler
+   67  clear
+   68  docker ps -a
+   69  docker kill  nginx_custom2
+   70  docker start  nginx_custom2
+   71  docker kill  nginx_custom2
+   72  clear
+   73  docker ps -a
+   74  docker exec -it nginx_custom1 /bin/bash
+   75  docker start nginx_custom1
+   76  docker ps -a
+   77  docker exec -it nginx_custom1 /bin/bash
+   78  clear
+   79  docker ps -a
+   80  docker rmi nginx_custom3
+   81  docker rmi nginx_custom2
+   82  docker rmi nginx_custom1
+   83  docker rm nginx_custom1
+   84  docker rm nginx_custom3
+   85  docker rm nginx_custom2
+   86  docker ps -a
+   87  docker stop  nginx_custom1
+   88  docker rm nginx_custom1
+   89  docker rm nginx_custom
+   90  docker ps -a
+   91  clear
+   92  docker images
+   93  docker rmi -f nginx
+   94  docker images
+   95  docker rmi -f ubuntu
+   96  docker images
